@@ -19,4 +19,8 @@ The system contains many moving parts, including a server, database, data logger
 # Images
 # 
 # Schematics
-# 
+
+<img src ="https://github.com/caleb221/Smart_Farm/blob/master/img/Schematic_arduinoSolarController1_Sheet_1_20200227122732.png" height="350" width="450">
+
+
+<img src ="https://github.com/caleb221/Smart_Farm/blob/master/img/Schematic_NodeAirSensor_Sheet_1_20200219034421.png" height="350" width="450">

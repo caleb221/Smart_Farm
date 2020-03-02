@@ -5,15 +5,21 @@ This is a smart farming implementation I made for a small scale farm in Texas
   This project is in progress, please wait for more updates as they become available
 # System Overview
 <img src ="https://github.com/caleb221/Smart_Farm/blob/master/img/pcc_smartFarm.png" height="350" width="450">
-The system contains many moving parts, including a server, database, data loggers, and water control. 
+The system is implemented using a server, database, various data loggers, and water control through multiple communication methods. 
 
 # Hardware
-  These are the microcontrollers used in this implementation<br>
-  Raspberry Pi 0w (database/server)<br>
-  Heltec ESP32-LoRa (LoRaWan Gateway)<br>
-  NodeMCU ESP8266 (Air quality and weather Node)<br>
-  Arduino Nano (field control and soil monitor node)<br>
-  Solar Panel (field power)<br>
+  The hardware is seperated into nodes, each containing their own implementation and schematics.
+  
+  
+  A Raspberry Pi 0w is used for the database and server<br>
+  
+  A Heltec ESP32-LoRa controls the LoRaWan Gateway<br>
+  
+  The NodeMCU ESP8266 handles the Air quality and weather status node.<br>
+  
+  An Arduino Nano with an AI-Thinker RA-02 (SX1278 433Mhz communication module) is used for field soil monitoring, and automated irrigation as well as handling its own solar module implementation.<br>
+  
+  
   
 
 # Images

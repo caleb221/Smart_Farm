@@ -19,6 +19,7 @@ The system is implemented using a server, database, various data loggers, and wa
   
   An Arduino Nano with an AI-Thinker RA-02 (SX1278 433Mhz communication module) is used for field soil monitoring, and automated irrigation as well as handling its own solar module implementation.<br>
   
+  A Router is used to handle MQTT messaging as well as clients.<br>
   
   
 

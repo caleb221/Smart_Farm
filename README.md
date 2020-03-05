@@ -21,7 +21,25 @@ The system is implemented using a server, database, various data loggers, and wa
   
   A Router is used to handle MQTT messaging as well as clients.<br>
   
-  
+ # Stack
+ 
+ 
+ Server:
+ 
+    Node.js
+    express
+    sockets.io
+    ejs
+    jquery
+    
+ Database:
+ 
+    RethinkDB
+ 
+ Communication layer:
+    
+    MQTT (802.11)
+    LoRa (433Mhz)
 
 # Images
 # 

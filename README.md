@@ -27,6 +27,7 @@ The system is implemented using a server, database, various data loggers, and wa
  Server:
  
     Node.js
+    mqtt
     express
     sockets.io
     ejs

@@ -51,6 +51,10 @@ The system is implemented using a server, database, various data loggers, and wa
 
 <img src ="https://github.com/caleb221/Smart_Farm/blob/master/img/Schematic_NodeAirSensor_Sheet_1_20200219034421.png" height="350" width="450">
 
+<img src = "https://github.com/caleb221/Smart_Farm/blob/master/img/PCB_design.png" 
+  height = "220" width = "250">
+
+
 # References
 
 https://www.pluralsight.com/guides/a-practical-introduction-to-rethinkdb

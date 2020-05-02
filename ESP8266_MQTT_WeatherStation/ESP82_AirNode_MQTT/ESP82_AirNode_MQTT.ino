@@ -20,8 +20,8 @@
 int nodeId = 1; //CHANGE THIS FOR EACH NODE!
 //===========================
 
-const char* ssid = "NETGEAR55";
-const char* passw =  "coolteapot283";
+const char* ssid = "WIFI_SSID";
+const char* passw =  "WIFI_PASS";
 const char* mqtt_server = "10.0.0.8";
 
 char* topicOut = "nodePlant/air";

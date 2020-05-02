@@ -43,7 +43,21 @@ The system is implemented using a server, database, various data loggers, and wa
     LoRa (433Mhz)
 
 # Images
-# 
+ 
+
+  <img src = "https://github.com/caleb221/Smart_Farm/blob/master/img/breakGnd.jpg" 
+    height = "220" width = "250">
+    <img src = "https://github.com/caleb221/Smart_Farm/blob/master/img/rows1.jpg"
+     height = "220" width = "250">
+     
+   <img src = "https://github.com/caleb221/Smart_Farm/blob/master/img/irrigationHalf.jpg"
+   height = "220" width = "250"> 
+      <img src = "https://github.com/caleb221/Smart_Farm/blob/master/img/bbCorn1.jpg" 
+      height = "220" width = "250">
+
+
+
+
 # Schematics
 
 <img src ="https://github.com/caleb221/Smart_Farm/blob/master/img/Schematic_arduinoSolarController1_Sheet_1_20200305051545.png" height="350" width="450">
@@ -52,6 +66,8 @@ The system is implemented using a server, database, various data loggers, and wa
 <img src ="https://github.com/caleb221/Smart_Farm/blob/master/img/Schematic_NodeAirSensor_Sheet_1_20200219034421.png" height="350" width="450">
 
 <img src = "https://github.com/caleb221/Smart_Farm/blob/master/img/PCB_design.png" 
+  height = "220" width = "250">
+  <img src = "https://github.com/caleb221/Smart_Farm/blob/master/img/pcbReal1.jpg" 
   height = "220" width = "250">
 
 

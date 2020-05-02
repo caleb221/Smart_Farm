@@ -43,7 +43,10 @@ The system is implemented using a server, database, various data loggers, and wa
     LoRa (433Mhz)
 
 # Images
- 
+# Farm progression
+ A ~.02 acre plot of land with a fence was prepared by first cutting down any vegetation, tilling, and creating rows for the crop. 
+<br> A Drip irrigation system was added so the system can water only where necessary, conserving water and energy.
+<br> A Corn seedling can be seen emerging from the soil with its respective dripper
 
   <img src = "https://github.com/caleb221/Smart_Farm/blob/master/img/breakGnd.jpg" 
     height = "220" width = "250">

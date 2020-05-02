@@ -22,7 +22,7 @@ int nodeId = 1; //CHANGE THIS FOR EACH NODE!
 
 const char* ssid = "WIFI_SSID";
 const char* passw =  "WIFI_PASS";
-const char* mqtt_server = "10.0.0.8";
+const char* mqtt_server = "MQTT_BROKER_IP";
 
 char* topicOut = "nodePlant/air";
 char* topicIn = "nodePlant/commands";

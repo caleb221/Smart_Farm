@@ -1,0 +1,107 @@
+
+body{ 
+background-image: linear-gradient(antiquewhite,black);
+background-repeat: no-repeat;
+background-attachment: fixed;
+}
+.naviSide
+{
+    background-color:black;
+    height:100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    //padding-top: 20px;
+}
+ button
+{
+    background-color:antiquewhite;
+   
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+    width: 180px;
+    padding-right: 120px;
+    text-align: center;
+    font-size: 24px;
+    display: block;
+}
+#descBox{
+    color;
+    position:fixed;
+    margin-left: 100px;
+    margin-top: -120px;
+    font-size: 35px;
+    background-color:lightblue;
+    color: black;
+    border-radius: 20px;
+}
+#weatherBox
+{    background-color:lightblue;
+border-radius: 50px;
+    position: fixed;
+    margin-left: 300px;
+}
+#topic{
+    color: black; 
+}
+#weatherAPI
+{
+    display: none;
+    
+}
+.weatherPic
+{
+    width: 100px;
+    height: 100px;
+}
+ button:hover
+{  
+    background-color:black;
+    color: antiquewhite;
+}
+
+.plot
+{
+    
+    width: 200px;
+    height: 1000px;
+   
+}
+.dropdown
+{
+    position: relative;
+    display: inline-block;
+}
+.dropCnt
+{
+    display: none;
+    position: absolute;
+    background-image: linear-gradient(skyblue,black);
+    //min-width: 100px;
+    //box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+    z-index: 1;
+    
+}
+.dropCnt button:hover {background-color: firebrick;}
+
+.dropdown:hover .dropCnt {
+  display: block;
+}
+.dropdown:hover .dropbtn {
+  background-color:darkseagreen;
+}
+
+
+.main{
+
+    color:greenyellow;
+    font-size: 50px;
+    margin-left: 200px;
+    padding: 0px,10px;
+    
+}

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="farmAppStyle.css" rel="stylesheet" />
+<script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <!--
+<script src="/socket.io/socket.io.js"></script>
+    
+    
+
+<script src="frontEndFarmApp.js"></script>
+!-->
+<script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+
+    
+    
+<!--
+rain guage
+air quality
+temperature
+humidity
+
+** HISTORICAL DATA **
+
+soil water level
+solar battery levels
+
+--CONTROL--
+water fields
+water section of field
+auto water
+ -> once daily unless there is water in soil
+
+!-->
+    
+<title>Plants!</title>
+<link rel="shortcut icon" href="webImg/mySymbol_ICO.ico"/>
+</head>
+    
+<body>
+    
+<script>  
+    var weatherData;    
+
+    function getWeather(index)
+    {
+
+var head = document.querySelector("#topic");
+var plots = document.querySelector("#plot");
+var weatherDiv = document.querySelector("#weatherAPI");
+    
+       head.innerHTML="Local Weather";
+       plots.style.display="none"; 
+       weatherDiv.style.display="block";
+       var box = document.querySelector("#descBox"); 
+       var weatherPic = document.querySelector("#weatherPic");
+       //https://openweathermap.org/current
+        
+       // pics http://openweathermap.org/img/wn/10d@2x.png
+       // http://openweathermap.org/img/wn/ICON.png
+        
+        var key = "b3bb7c65adf507ea0df9cff43281b380";
+        var iconUrl="http://openweathermap.org/img/wn/";//.png"
+        var cityID=["4672171","4704940","4675373","4726206","4674023"]; 
+        
+        var forcWeather ="weather"; //"weather";
+       // if(5day == true)
+        //    var forcWeather ="forecast";
+        
+        var currentReq = "https://api.openweathermap.org/data/2.5/"+forcWeather+"?id="+cityID[index]+"&units=imperial&appid="+key;
+     
+        //api.openweathermap.org/data/2.5/forecast?q=London,us&mode=xml
+        
+        var data1=getAPIData(currentReq);
+        data1.then(data => setData(data));
+        
+        
+        
+        
+        for(var i=0;i<2;i++)
+            {
+        var ico = weatherData.weather[i].icon;
+        var KtoF=weatherData.main.temp;
+        var hiT=weatherData.main.temp_max;
+        var lowT=weatherData.main.temp_min;
+        var humidLev=weatherData.main.humidity;
+        var windSpeed=weatherData.wind.speed;
+        
+        weatherPic.src=iconUrl+ico+".png";
+        box.innerHTML+= "<p id = \"cityName\">\"City: "+weatherData.name+"</p>"+
+            "<p id=\"descript\">"+weatherData.weather[0].description+"</p>"+
+            "<p id=\"tempOut\">Temperature: "+KtoF.toFixed(0)+"<br>"+
+            lowT.toFixed(0)+"  - "+hiT.toFixed(0)+"</p>"+
+            "<p id=\"humidOut\">Humidity: "+humidLev+"%</p>"+                
+            "<p id=\"wind\">Wind: "+windSpeed+"</p>"; 
+            
+    
+            }
+    }
+    
+    function setData(input)
+    {
+        weatherData=input;
+    }
+    
+    async function getAPIData(req)
+    {   
+        //https://openweathermap.org/current
+       //console.log(req);
+       let response = await fetch(req);
+       let  data =  await response.json();
+       return data;
+    }
+   /* 
+    var trace1 = {
+  x: [1, 2, 3, 4],
+  y: [10, 15, 13, 17],
+  type: 'scatter'
+};
+
+var trace2 = {
+  x: [1, 2, 3, 4],
+  y: [16, 5, 11, 9],
+  type: 'scatter'
+};
+
+var data = [trace1,trace2];
+
+Plotly.newPlot('plot', data);
+    */
+</script>
+   <nav class="naviSide">
+        <button id="weather" onclick="getWeather(0)">Local Weather</button>
+        <button id="temp"> Temperature</button>
+        <button id="humid"> Humidity</button>
+        <button id="airql"> Air Quality</button>
+        <button id="rain"> Rain Guage</button>
+        <button id="soil"> Field Soil</button>
+        <button id="solr"> Solar Battery</button>
+        <button id="crtl">Field Control</button>
+        <button id="hist">History</button>
+        <br>
+        <img src="webImg/mySym.png" height="175" width="200">
+    </nav>
+    
+    <div class ="main">
+    <h3 id="topic">Temperature</h3>
+       <div id="plot"></div>
+       <div id="weatherAPI" >
+           
+           <div id="weatherBox">
+           
+               
+               <img id ="weatherPic" src="webImg/tech1.png" height="90" width="90">
+               <div id="descBox">
+              <!-- <p id = "cityName">City</p>
+               <p id="descript">Description</p>             
+               <p id="tempOut">Temperature</p>                
+               <p id="humidOut">Humidity</p>                
+               <p id="wind">Wind</p>!-->
+               </div>
+           </div>
+            <button id="getCurrent">Current Weather</button>
+            <button id="getForecast">5 Day Forcast </button>
+            <div class="dropdown">
+            <button class="dropbtn"> Cities</button>
+                <div class="dropCnt">
+                <button onclick = "getWeather(0)">Bandera</button>
+                <button onclick = "getWeather(1)">Lake Hills</button>
+                <button onclick = "getWeather(2)">Boerne</button>
+                <button onclick = "getWeather(3)">San Antonio</button>
+                <button onclick = "getWeather(4)">Bexar County</button>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+ 
+ 
+
+</body>
+</html>
